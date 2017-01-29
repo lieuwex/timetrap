@@ -1,5 +1,9 @@
-Timetrap [![Build Status](https://secure.travis-ci.org/samg/timetrap.png)](http://travis-ci.org/samg/timetrap)
+Timetrap
 ========
+
+Fork with commits I want not merged into upstream, since the author or the
+comitters don't answer. I try to keep uptodate with upstream, while merging some
+nice PRs.
 
 Timetrap is a simple command line time tracker written in ruby. It provides an
 easy to use command line interface for tracking what you spend your time on.
@@ -9,7 +13,7 @@ Getting Started
 
 To install:
 
-    $ gem install timetrap
+    $ gem build timetrap.gemspec && gem install ./timetrap*.gem
 
 This will place a ``t`` executable in your path.
 
