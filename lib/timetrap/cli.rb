@@ -142,7 +142,7 @@ COMMAND is one of:
   # view current timesheet
   $ t display
 
-  Submit bugs and feature requests to http://github.com/samg/timetrap/issues
+  Submit bugs and feature requests to http://github.com/lieuwex/timetrap/issues
     EOF
 
     def parse arguments
