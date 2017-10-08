@@ -117,7 +117,7 @@ Command line flags also have short versions.
     $ # equivalent to the command above
     $ t i -a "5 minutes ago"
 
-You can consult the Chronic gem (http://chronic.rubyforge.org/) for a full
+You can consult the Chronic gem (https://github.com/mojombo/chronic) for a full
 list of parsable time formats, but all of these should work.
 
     $ t out --at "in 30 minutes"
@@ -312,7 +312,7 @@ Commands
 --------
 
 **archive**
-  Archives the selected entries (by moving them to a sheet called ``_[SHEET]``)
+  Archive the selected entries (by moving them to a sheet called ``_[SHEET]``)
   These entries can be seen by running ``t display _[SHEET]``.
 
   usage: ``t archive [--start DATE] [--end DATE] [--grep REGEX] [SHEET]``
@@ -324,8 +324,8 @@ Commands
   usage: ``t backend``
 
 **configure**
-  Creates a config file at  ``~/.timetrap.yml`` or ``ENV['TIMETRAP_CONFIG_FILE']`` if
-  one doesn't exist.  If one does exist it will update it with new
+  Create a config file at  ``~/.timetrap.yml`` or ``ENV['TIMETRAP_CONFIG_FILE']`` if
+  one doesn't exist.  If one does exist, update it with new
   configuration options preserving any user overrides. Prints path to config
   file.  This file may contain ERB.
 
@@ -348,7 +348,7 @@ Commands
   usage: ``t display [--ids] [--round] [--start DATE] [--end DATE] [--format FMT] [--grep REGEX] [SHEET | all | full]``
 
 **edit**
-  Inserts a note associated with the an entry in the timesheet, or edits the
+  Insert a note associated with the an entry in the timesheet, or edit the
   start or end times.  Defaults to the current entry, or previously running
   entry. An ``--id`` flag can be passed with the entry's id (see display.)
 
