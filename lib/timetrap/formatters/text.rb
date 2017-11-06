@@ -17,7 +17,7 @@ module Timetrap
         (sheet_names = sheets.keys.sort).each do |sheet|
 
           self.output <<  "Timesheet: #{sheet}\n"
-          id_heading = Timetrap::CLI.args['-v'] ? "Id#{' ' * (max_id_length - 3)}" : "  "
+          id_heading = "Id#{' ' * (max_id_length - 3)}"
           self.output <<  "#{id_heading}  Day                Start      End        Duration   Notes\n"
           last_start = nil
           from_current_day = []
@@ -25,7 +25,7 @@ module Timetrap
           sheets[sheet].each_with_index do |e, i|
             from_current_day << e
             self.output <<  "%-#{max_id_length + 1}s%16s%11s -%9s%10s    %s\n" % [
-              (Timetrap::CLI.args['-v'] ? e.id : ''),
+              e.id,
               format_date_if_new(e.start, last_start),
               format_time(e.start),
               format_time(e.end),
@@ -66,11 +66,7 @@ module Timetrap
 
       def max_id_length
         @max_id_length ||= begin
-          if Timetrap::CLI.args['-v']
-            entries.inject(3) {|l, e| [e.id.to_s.length, l].max}
-          else
-            3
-          end
+          entries.inject(3) {|l, e| [e.id.to_s.length, l].max}
         end
       end
 
